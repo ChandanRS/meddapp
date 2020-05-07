@@ -1,0 +1,28 @@
+#bg-img{
+    width: auto;
+}
+
+.centered-heading {
+    position: absolute;
+   
+    font-size: 3em;
+    color: white;
+    margin-top: -40%;
+    margin-left: 40%;
+    
+}
+
+.centered{
+    position: absolute;
+    font-size: 1.3em;
+    margin-top: -35%;
+    margin-left: 32%;
+    color: white;
+
+}
+
+.btn{
+    color: white;
+    margin-top: -60%;
+    margin-left: 43%;
+}

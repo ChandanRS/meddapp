@@ -1,0 +1,37 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style type="text/css">
+
+body{ 
+    background-color : cyan;
+    text-align : center
+}
+
+h1{
+    margin-top : 5%;
+    margin-bottom : 3%;
+}
+input{
+    margin-left : 38%
+}
+
+
+</style>
+
+
+</head>
+
+</style>
+<body>
+
+<h1> Edit Item here</h1>
+
+<form action="/meds/edit/{{med.mid}}" method="post">
+<input class="form-control col-lg-3" type="text" name="name" value="{{med.name}}" placeholder=""/>
+<input class="form-control col-lg-3" type="text" name="count" value="{{med.count}}" placeholder=""/>
+<input class="form-control col-lg-3" type="text" name="brand" value="{{med.brand}}" placeholder=""/>
+<button class="btn btn-success" type="submit">Save</button>
+</form>
+</body>
+</html>
