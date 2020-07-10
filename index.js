@@ -18,7 +18,7 @@ app.get('/add',(req,res)=>{
 
 app.post('/meds/add',(req,res)=>{
 
-    console.log('post body',req.body)
+    // console.log('post body',req.body)
     const client = new Client({
         user : 'postgres',
         host : 'localhost',
@@ -53,8 +53,8 @@ app.get('/dashboard',(req,res)=>{
         return client.query('SELECT SUM(count) FROM meds; SELECT DISTINCT COUNT(brand) FROM meds')
     })
     .then((results) => {
-        console.log('results?',results[0])
-        console.log('results?',results[1])
+        // console.log('results?',results[0])
+        // console.log('results?',results[1])
        res.render('dashboard',{n1:results[0].rows,n2:results[1].rows})
     }); 
 })
@@ -74,7 +74,7 @@ app.get('/meds',(req,res)=>{
        return client.query('SELECT * FROM meds')
     })
     .then((results) => {
-        console.log('results?',results)
+        // console.log('results?',results)
         res.render('meds',results)
     }); 
 });
@@ -116,7 +116,7 @@ app.get('/meds/edit/:id',(req,res)=>{
        return client.query(sql,params)
     })
     .then((results) => {
-        console.log('results?',results)
+        // console.log('results?',results)
         res.render('meds-edit',{med: results.rows[0]});
     }); 
 })
@@ -137,7 +137,7 @@ app.post('/meds/edit/:id',(req,res)=>{
        return client.query(sql,params);
     })
     .then((results) => {
-        console.log('results?',results)
+        // console.log('results?',results)
         res.redirect('/meds');
     })
    
