@@ -7,6 +7,7 @@ const mustache = mustacheExpress();
 const { Client } =  require('pg');
 mustache.cache =null;
 
+const PORT = process.env.PORT || 3000;
 
 app.engine('mustache',mustache);
 app.set('view engine','mustache');
@@ -143,4 +144,4 @@ app.post('/meds/edit/:id',(req,res)=>{
    
 
 });
-app.listen(5001,()=>console.log('Listening to port 5001'));
+app.listen(PORT,()=>console.log(`Listening to port ${PORT}`));
